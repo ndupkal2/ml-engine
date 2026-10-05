@@ -1,12 +1,12 @@
 import os
 import json
-from app.config.db_client import get_db_connection
-from app.services.validation_service import validate_transaction_data
-from app.services.feature_service import extract_features
-from app.preprocessing.preprocessing_service import preprocess_features
-from app.services.rule_engine import evaluate_transaction_rules
-from app.services.ocr_service import read_odometer, read_receipt
-from app.services.notification_service import send_anomaly_notification
+from ..config.db_client import get_db_connection
+from .validation_service import validate_transaction_data
+from .feature_service import extract_features
+from ..preprocessing.preprocessing_service import preprocess_features
+from .rule_engine import evaluate_transaction_rules
+from .ocr_service import read_odometer, read_receipt
+from .notification_service import send_anomaly_notification
 
 def run_inference_for_transaction(transaction_id: int) -> dict:
     connection = None

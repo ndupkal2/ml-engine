@@ -1,1 +1,1 @@
-# Package marker
+from .main import app

@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from app.services.inference_service import run_inference_for_transaction
+from .services.inference_service import run_inference_for_transaction
 
 app = FastAPI(title="Fuel ML Engine", version="1.0.0")
 
